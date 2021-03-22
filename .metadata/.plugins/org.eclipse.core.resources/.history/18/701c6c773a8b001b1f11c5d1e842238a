@@ -1,0 +1,47 @@
+package com.example.demo.controller;
+
+import java.util.List;
+import java.util.function.Supplier;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.Palindrome;
+import com.example.demo.repository.PalindromeRepository;
+import com.example.demo.service.PalindromeService;
+
+@RestController
+@RequestMapping("/api")
+@CrossOrigin()
+public class PalindromeController {
+	
+	@Autowired
+	public PalindromeRepository palindromeRepository;
+	
+	@Autowired
+    private PalindromeService PalindromeService;
+	
+	@GetMapping("/palindromes")
+	public List<Palindrome> getAllPalindrome(){
+		return palindromeRepository.findAll();
+	}
+	
+	@GetMapping("/palindromes")
+	public ResponseEntity<Palindrome> getByOriginal(@RequestParam(value ="str") String original) {
+		Palindrome palindrome = palindromeRepository.findByOriginal(original)
+				.orElseGet((Supplier<? extends Palindrome>) createPalindrome(original));
+		return ResponseEntity.ok(palindrome);
+	}
+	
+	private Palindrome createPalindrome(String original) {
+		//lps is short for longest palindromic substring
+		String lps=PalindromeService.longestPalindrome(original);
+		Palindrome palindrome = new Palindrome(original, lps);
+		return palindromeRepository.save(palindrome);
+	}
+}

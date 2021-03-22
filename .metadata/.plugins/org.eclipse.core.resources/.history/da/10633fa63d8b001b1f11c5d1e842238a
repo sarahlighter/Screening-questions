@@ -1,0 +1,65 @@
+package com.example.demo.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotBlank;
+import org.hibernate.annotations.NaturalId;
+
+@Entity
+@Table(name = "palindrome", uniqueConstraints = { @UniqueConstraint(columnNames = { "original" }) })
+public class Palindrome {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public long id;
+
+	@NaturalId
+	@NotBlank
+	public String original;
+
+	public String longestPalindrome;
+
+	public Palindrome() {
+
+	}
+
+	public Palindrome(@NotBlank String original, String longestPalindrome) {
+		this.original = original;
+		this.longestPalindrome = longestPalindrome;
+	}
+
+	public Palindrome(long id, @NotBlank String original, String longestPalindrome) {
+		this.id = id;
+		this.original = original;
+		this.longestPalindrome = longestPalindrome;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getOriginal() {
+		return original;
+	}
+
+	public void setOriginal(String original) {
+		this.original = original;
+	}
+
+	public String getLongestPalindrome() {
+		return longestPalindrome;
+	}
+
+	public void setLongestPalindrome(String longestPalindrome) {
+		this.longestPalindrome = longestPalindrome;
+	}
+
+}
