@@ -1,0 +1,24 @@
+package com.demo;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class SolutionTest {
+	private Solution solution;
+
+	@BeforeEach
+	public void setUp() throws Exception {
+		solution=new Solution();
+	}
+
+	@Test
+	void testBinaryReversal() {
+		assertEquals(244, solution.BinaryReversal("47"));
+		assertEquals(235, solution.BinaryReversal("215"));
+		assertEquals(245, solution.BinaryReversal("257"));
+		assertEquals(76, solution.BinaryReversal("50"));
+	}
+
+}

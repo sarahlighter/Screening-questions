@@ -1,0 +1,21 @@
+package com.example.demo.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.Test;
+import net.sourceforge.jwebunit.util.TestingEngineRegistry;
+
+class PalindromeControllerTest {
+
+	@Before
+    public void prepare() {
+        setTestingEngineKey(TestingEngineRegistry.TESTING_ENGINE_HTMLUNIT); 
+        setBaseUrl("http://localhost:8085/api/");
+    }
+	@Test
+	void testGetByOriginal() {
+		assertEquals("244", solution.BinaryReversal("47"));
+	}
+
+}

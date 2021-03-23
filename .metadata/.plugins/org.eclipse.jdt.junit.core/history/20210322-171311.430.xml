@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PalindromeServiceTest" project="LongestPalindromicSubstring" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.demo.service.PalindromeServiceTest" time="0.035" displayname="PalindromeServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.service.PalindromeServiceTest]">
+    <testcase name="testLongestPalindrome" classname="com.example.demo.service.PalindromeServiceTest" time="0.025" displayname="testLongestPalindrome()" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.service.PalindromeServiceTest]/[method:testLongestPalindrome()]"/>
+    <testcase name="testLongestPalindrome2" classname="com.example.demo.service.PalindromeServiceTest" time="0.01" displayname="testLongestPalindrome2()" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.service.PalindromeServiceTest]/[method:testLongestPalindrome2()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,22 @@
+package com.example.demo.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.junit.platform.runner.JUnitPlatform;
+
+@ExtendWith(MockitoExtension.class)
+@RunWith(JUnitPlatform.class)
+class PalindromeControllerTest {
+
+
+	@Test
+	void testGetByOriginal() {
+		assertEquals();
+	}
+
+}

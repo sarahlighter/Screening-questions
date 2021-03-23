@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class PalindromeService {
 	
-	public String longestPalindrome(String original) {
-		int len = original.length();
+	public String longestPalindrome(String inputString) {
+		int len = inputString.length();
 		if (len <= 1)
-			return original;
-		char[] str = original.toCharArray();
+			return inputString;
+		char[] str = inputString.toCharArray();
 		int start = 0, end = 0;
 		for (int i = 0; i < len; i++) {
 			int length1 = expendAroundCenter(str, i, i);
@@ -21,7 +21,7 @@ public class PalindromeService {
 			}
 		}
 
-		return original.substring(start, end + 1);
+		return inputString.substring(start, end + 1);
 	}
 
 	private int expendAroundCenter(char[] str, int left, int right) {

@@ -1,0 +1,25 @@
+package com.demo;
+import java.math.BigInteger; 
+/*
+ * Have the function BinaryReversal(str) take the str parameter being passed, which will be a positive integer, take its binary representation (padded to the nearest N * 8 bits), reverse that string of bits, and then finally return the new reversed string in decimal form. For example: if str is "47" then the binary version of this integer is 101111 but we pad it to be 00101111. Your program should reverse this binary string which then becomes: 11110100 and then finally return the decimal version of this string, which is 244.
+ */
+public class Solution {
+	public String BinaryReversal(String str) {
+		BigInteger number = new BigInteger(str);
+		String binary=number.toString(2);
+		StringBuffer sb= new StringBuffer(binary);
+		sb=sb.reverse();
+		while(sb.length()%8!=0) {
+			sb.append(0);
+		}
+		BigInteger reversedInt=new BigInteger(sb.toString(),2);
+		return reversedInt.toString();
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Solution s= new Solution();
+		String res=s.BinaryReversal("47");
+		System.out.println(res);
+	}
+
+}

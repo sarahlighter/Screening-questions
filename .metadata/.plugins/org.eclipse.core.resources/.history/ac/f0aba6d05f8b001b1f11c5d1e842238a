@@ -1,0 +1,20 @@
+package com.example.demo.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
+
+@ExtendWith(MockitoExtension.class)
+@RunWith(JUnitPlatform.class)
+class PalindromeControllerTest {
+
+
+	@Test
+	void testGetByOriginal() {
+		assertEquals("244", solution.BinaryReversal("47"));
+	}
+
+}

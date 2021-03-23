@@ -11,5 +11,5 @@ import com.example.demo.model.Palindrome;
 @Repository
 public interface PalindromeRepository extends JpaRepository<Palindrome,Long> {
 	List<Palindrome> findAll();
-	Optional<Palindrome> findByOriginal(String original);
+	Optional<Palindrome> findByInputString(String inputString);
 }

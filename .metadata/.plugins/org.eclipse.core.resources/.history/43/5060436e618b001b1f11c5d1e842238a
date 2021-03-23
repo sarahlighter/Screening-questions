@@ -1,0 +1,16 @@
+package com.example.demo.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+
+@WebMvcTest
+class PalindromeControllerTest{
+
+
+	@Test
+	void testGetByOriginal() {
+		assertEquals();
+	}
+
+}

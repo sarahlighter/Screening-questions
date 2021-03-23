@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SolutionTest" project="Problem2" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.demo.SolutionTest" time="0.0" displayname="SolutionTest" uniqueid="[engine:junit-jupiter]/[class:com.demo.SolutionTest]">
+    <testcase name="testBinaryReversal" classname="com.demo.SolutionTest" time="0.0" displayname="testBinaryReversal()" uniqueid="[engine:junit-jupiter]/[class:com.demo.SolutionTest]/[method:testBinaryReversal()]"/>
+  </testsuite>
+</testrun>

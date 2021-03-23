@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.NaturalId;
 
 @Entity
-@Table(name = "palindrome", uniqueConstraints = { @UniqueConstraint(columnNames = { "original" }) })
+@Table(name = "palindrome", uniqueConstraints = { @UniqueConstraint(columnNames = { "inputString" }) })
 public class Palindrome {
 
 	@Id
@@ -22,7 +22,7 @@ public class Palindrome {
 
 	@NaturalId
 	@NotBlank
-	public String original;
+	public String inputString;
 	
 	public String longestPalindrome;
 
@@ -30,14 +30,14 @@ public class Palindrome {
 
 	}
 
-	public Palindrome(@NotBlank String original, String longestPalindrome) {
-		this.original = original;
+	public Palindrome(@NotBlank String inputString, String longestPalindrome) {
+		this.inputString = inputString;
 		this.longestPalindrome = longestPalindrome;
 	}
 
-	public Palindrome(long id, @NotBlank String original, String longestPalindrome) {
+	public Palindrome(long id, @NotBlank String inputString, String longestPalindrome) {
 		this.id = id;
-		this.original = original;
+		this.inputString = inputString;
 		this.longestPalindrome = longestPalindrome;
 	}
 
@@ -49,12 +49,12 @@ public class Palindrome {
 		this.id = id;
 	}
 
-	public String getOriginal() {
-		return original;
+	public String getInputString() {
+		return inputString;
 	}
 
-	public void setOriginal(String original) {
-		this.original = original;
+	public void setInputString(String inputString) {
+		this.inputString = inputString;
 	}
 
 	public String getLongestPalindrome() {

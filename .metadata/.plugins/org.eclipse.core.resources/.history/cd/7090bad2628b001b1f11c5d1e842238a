@@ -1,0 +1,30 @@
+package com.example.demo.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
+
+import com.example.demo.repository.PalindromeRepository;
+import com.example.demo.service.PalindromeService;
+
+@WebMvcTest
+class PalindromeControllerTest{
+	@Autowired
+    private MockMvc mockMvc;
+ 
+    @MockBean
+	public PalindromeRepository palindromeRepository;
+	
+    @MockBean
+    private PalindromeService PalindromeService;
+
+	@Test
+	void testGetByOriginal() {
+		assertEquals();
+	}
+
+}

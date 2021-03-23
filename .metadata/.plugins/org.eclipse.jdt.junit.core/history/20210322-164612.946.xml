@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PalindromeControllerTest" project="LongestPalindromicSubstring" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.demo.controller.PalindromeControllerTest" time="0.299" displayname="PalindromeControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.controller.PalindromeControllerTest]">
+    <testcase name="testCreatePalindrome" classname="com.example.demo.controller.PalindromeControllerTest" time="0.0" displayname="testCreatePalindrome()" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.controller.PalindromeControllerTest]/[method:testCreatePalindrome()]"/>
+    <testcase name="testGetByInputString" classname="com.example.demo.controller.PalindromeControllerTest" time="0.299" displayname="testGetByInputString()" uniqueid="[engine:junit-jupiter]/[class:com.example.demo.controller.PalindromeControllerTest]/[method:testGetByInputString()]"/>
+  </testsuite>
+</testrun>
